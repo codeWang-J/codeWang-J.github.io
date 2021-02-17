@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>爬虫 | Hexo</title>
+  <title>Archives: 2021/2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目的: 使用python来爬取百度百科中的《青春有你2》所有的参赛选手的信息。 爬虫的过程 发送请求（request模块） 获取响应数据 解析并提取数据 保存数据  本实践所使用的python库主要又两个request和BeautifulSoup导入： 12pip3 install lxmlpip3 install request 一、爬取百度百科中《青春有你2》中所有的参赛选手信息，并返回页面数">
-<meta property="og:type" content="article">
-<meta property="og:title" content="爬虫">
-<meta property="og:url" content="http://example.com/2021/01/11/%E7%88%AC%E5%8F%96%E3%80%8A%E9%9D%92%E6%98%A5%E6%9C%89%E4%BD%A02%E3%80%8B%E4%B8%AD%E6%89%80%E6%9C%89%E5%8F%82%E8%B5%9B%E9%80%89%E6%89%8B%E6%95%B0%E6%8D%AE%E5%B9%B6%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/archives/2021/02/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="目的: 使用python来爬取百度百科中的《青春有你2》所有的参赛选手的信息。 爬虫的过程 发送请求（request模块） 获取响应数据 解析并提取数据 保存数据  本实践所使用的python库主要又两个request和BeautifulSoup导入： 12pip3 install lxmlpip3 install request 一、爬取百度百科中《青春有你2》中所有的参赛选手信息，并返回页面数">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-10T19:47:14.000Z">
-<meta property="article:modified_time" content="2021-01-10T20:23:51.538Z">
 <meta property="article:author" content="WangJin">
-<meta property="article:tag" content="实践">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -155,211 +150,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-爬取《青春有你2》中所有参赛选手数据并进行数据分析" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      爬虫
-    </h1>
-  
-
-        
-        <a href="/2021/01/11/%E7%88%AC%E5%8F%96%E3%80%8A%E9%9D%92%E6%98%A5%E6%9C%89%E4%BD%A02%E3%80%8B%E4%B8%AD%E6%89%80%E6%9C%89%E5%8F%82%E8%B5%9B%E9%80%89%E6%89%8B%E6%95%B0%E6%8D%AE%E5%B9%B6%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2021-01-10T19:47:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-11</time>
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/02/18/%E5%BC%80%E6%94%BEMySQL%E7%9A%84%E7%AB%AF%E5%8F%A3%EF%BC%8C%E8%BF%9C%E7%A8%8B%E9%93%BE%E6%8E%A5mysql/" class="archive-article-date">
+  	<time datetime="2021-02-17T19:44:47.683Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-18</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>目的: 使用python来爬取百度百科中的《青春有你2》所有的参赛选手的信息。</p>
-<h1 id="爬虫的过程"><a href="#爬虫的过程" class="headerlink" title="爬虫的过程"></a>爬虫的过程</h1><ul>
-<li>发送请求（request模块）</li>
-<li>获取响应数据</li>
-<li>解析并提取数据</li>
-<li>保存数据</li>
-</ul>
-<h2 id="本实践所使用的python库主要又两个request和BeautifulSoup"><a href="#本实践所使用的python库主要又两个request和BeautifulSoup" class="headerlink" title="本实践所使用的python库主要又两个request和BeautifulSoup"></a>本实践所使用的python库主要又两个request和BeautifulSoup</h2><p>导入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip3 install lxml</span><br><span class="line">pip3 install request</span><br></pre></td></tr></table></figure>
-<h3 id="一、爬取百度百科中《青春有你2》中所有的参赛选手信息，并返回页面数据"><a href="#一、爬取百度百科中《青春有你2》中所有的参赛选手信息，并返回页面数据" class="headerlink" title="一、爬取百度百科中《青春有你2》中所有的参赛选手信息，并返回页面数据"></a>一、爬取百度百科中《青春有你2》中所有的参赛选手信息，并返回页面数据</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取当天的日期,并进行格式化,用于后面文件命名，格式:20200420</span></span><br><span class="line">today = datetime.date.today().strftime(<span class="string">&#x27;%Y%m%d&#x27;</span>)    </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">crawl_wiki_data</span>():</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    爬取百度百科中《青春有你2》中参赛选手信息，返回html</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    headers = &#123; </span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url=<span class="string">&#x27;https://baike.baidu.com/item/青春有你第二季&#x27;</span>                         </span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = requests.get(url,headers=headers)</span><br><span class="line">        print(response.status_code)</span><br><span class="line"></span><br><span class="line">        <span class="comment">#将一段文档传入BeautifulSoup的构造方法,就能得到一个文档的对象, 可以传入一段字符串</span></span><br><span class="line">        soup = BeautifulSoup(response.text,<span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">#返回的是class为table-view log-set-param的&lt;table&gt;所有标签</span></span><br><span class="line">        tables = soup.find_all(<span class="string">&#x27;table&#x27;</span>,&#123;<span class="string">&#x27;class&#x27;</span>:<span class="string">&#x27;table-view log-set-param&#x27;</span>&#125;)</span><br><span class="line"></span><br><span class="line">        crawl_table_title = <span class="string">&quot;参赛学员&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> table <span class="keyword">in</span>  tables:           </span><br><span class="line">            <span class="comment">#对当前节点前面的标签和字符串进行查找</span></span><br><span class="line">            table_titles = table.find_previous(<span class="string">&#x27;div&#x27;</span>).find_all(<span class="string">&#x27;h3&#x27;</span>)</span><br><span class="line">            <span class="keyword">for</span> title <span class="keyword">in</span> table_titles:</span><br><span class="line">                <span class="keyword">if</span>(crawl_table_title <span class="keyword">in</span> title):</span><br><span class="line">                    <span class="keyword">return</span> table       </span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="二、对爬取的页面数据进行解析，并保存为json文件"><a href="#二、对爬取的页面数据进行解析，并保存为json文件" class="headerlink" title="二、对爬取的页面数据进行解析，并保存为json文件"></a>二、对爬取的页面数据进行解析，并保存为json文件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_wiki_data</span>(<span class="params">table_html</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    从百度百科返回的html中解析得到选手信息，以当前日期作为文件名，存JSON文件,保存到work目录下</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    bs = BeautifulSoup(<span class="built_in">str</span>(table_html),<span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">    all_trs = bs.find_all(<span class="string">&#x27;tr&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    error_list = [<span class="string">&#x27;\&#x27;&#x27;</span>,<span class="string">&#x27;\&quot;&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    stars = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> tr <span class="keyword">in</span> all_trs[<span class="number">1</span>:]:</span><br><span class="line">         all_tds = tr.find_all(<span class="string">&#x27;td&#x27;</span>)</span><br><span class="line">         </span><br><span class="line">         star = &#123;&#125;</span><br><span class="line"></span><br><span class="line">         <span class="comment">#姓名</span></span><br><span class="line">         star[<span class="string">&quot;name&quot;</span>]=all_tds[<span class="number">0</span>].text</span><br><span class="line">         <span class="comment">#个人百度百科链接</span></span><br><span class="line">         star[<span class="string">&quot;link&quot;</span>]= <span class="string">&#x27;https://baike.baidu.com&#x27;</span> + all_tds[<span class="number">0</span>].find(<span class="string">&#x27;a&#x27;</span>).get(<span class="string">&#x27;href&#x27;</span>)</span><br><span class="line">         <span class="comment">#籍贯</span></span><br><span class="line">         star[<span class="string">&quot;zone&quot;</span>]=all_tds[<span class="number">1</span>].text</span><br><span class="line">         <span class="comment">#星座</span></span><br><span class="line">         star[<span class="string">&quot;constellation&quot;</span>]=all_tds[<span class="number">2</span>].text</span><br><span class="line">         <span class="comment">#身高</span></span><br><span class="line">         star[<span class="string">&quot;height&quot;</span>]=all_tds[<span class="number">3</span>].text</span><br><span class="line">         <span class="comment">#体重</span></span><br><span class="line">         star[<span class="string">&quot;weight&quot;</span>]= all_tds[<span class="number">4</span>].text</span><br><span class="line"></span><br><span class="line">         <span class="comment">#花语,去除掉花语中的单引号或双引号</span></span><br><span class="line">         flower_word = all_tds[<span class="number">5</span>].text</span><br><span class="line">         <span class="keyword">for</span> c <span class="keyword">in</span> flower_word:</span><br><span class="line">             <span class="keyword">if</span>  c <span class="keyword">in</span> error_list:</span><br><span class="line">                 flower_word=flower_word.replace(c,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">         star[<span class="string">&quot;flower_word&quot;</span>]=flower_word </span><br><span class="line">         </span><br><span class="line">         <span class="comment">#公司</span></span><br><span class="line">         <span class="keyword">if</span> <span class="keyword">not</span> all_tds[<span class="number">6</span>].find(<span class="string">&#x27;a&#x27;</span>) <span class="keyword">is</span>  <span class="literal">None</span>:</span><br><span class="line">             star[<span class="string">&quot;company&quot;</span>]= all_tds[<span class="number">6</span>].find(<span class="string">&#x27;a&#x27;</span>).text</span><br><span class="line">         <span class="keyword">else</span>:</span><br><span class="line">             star[<span class="string">&quot;company&quot;</span>]= all_tds[<span class="number">6</span>].text  </span><br><span class="line"></span><br><span class="line">         stars.append(star)</span><br><span class="line"></span><br><span class="line">    json_data = json.loads(<span class="built_in">str</span>(stars).replace(<span class="string">&quot;\&#x27;&quot;</span>,<span class="string">&quot;\&quot;&quot;</span>))   </span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;work/&#x27;</span> + today + <span class="string">&#x27;.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        json.dump(json_data, f, ensure_ascii=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h3 id="三、爬取每个选手的百度百科图片，并运行保存"><a href="#三、爬取每个选手的百度百科图片，并运行保存" class="headerlink" title="三、爬取每个选手的百度百科图片，并运行保存"></a>三、爬取每个选手的百度百科图片，并运行保存</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">crawl_pic_urls</span>():</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    爬取每个选手的百度百科图片，并保存</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span> </span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;work/&#x27;</span>+ today + <span class="string">&#x27;.json&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">         json_array = json.loads(file.read())</span><br><span class="line"></span><br><span class="line">    statistics_datas = []</span><br><span class="line"></span><br><span class="line">    headers = &#123; </span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&#x27;</span> </span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> star <span class="keyword">in</span> json_array:</span><br><span class="line"></span><br><span class="line">        name = star[<span class="string">&#x27;name&#x27;</span>]</span><br><span class="line">        link = star[<span class="string">&#x27;link&#x27;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">#向选手个人百度百科发送一个http get请求</span></span><br><span class="line">        response = requests.get(link,headers=headers)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">#将一段文档传入BeautifulSoup的构造方法,就能得到一个文档的对象</span></span><br><span class="line">        bs = BeautifulSoup(response.text,<span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">#从个人百度百科页面中解析得到一个链接，该链接指向选手图片列表页面</span></span><br><span class="line">        pic_list_url = bs.select(<span class="string">&#x27;.summary-pic a&#x27;</span>)[<span class="number">0</span>].get(<span class="string">&#x27;href&#x27;</span>)</span><br><span class="line">        pic_list_url = <span class="string">&#x27;https://baike.baidu.com&#x27;</span> + pic_list_url</span><br><span class="line">        </span><br><span class="line">        <span class="comment">#向选手图片列表页面发送http get请求</span></span><br><span class="line">        pic_list_response = requests.get(pic_list_url,headers=headers)</span><br><span class="line"></span><br><span class="line">        <span class="comment">#对选手图片列表页面进行解析，获取所有图片链接</span></span><br><span class="line">        bs = BeautifulSoup(pic_list_response.text,<span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">        pic_list_html=bs.select(<span class="string">&#x27;.pic-list img &#x27;</span>)</span><br><span class="line"></span><br><span class="line">        pic_urls = []</span><br><span class="line">        <span class="keyword">for</span> pic_html <span class="keyword">in</span> pic_list_html: </span><br><span class="line">            pic_url = pic_html.get(<span class="string">&#x27;src&#x27;</span>)</span><br><span class="line">            pic_urls.append(pic_url)</span><br><span class="line"></span><br><span class="line">        <span class="comment">#根据图片链接列表pic_urls, 下载所有图片，保存在以name命名的文件夹中</span></span><br><span class="line">        down_pic(name,pic_urls)</span><br><span class="line"></span><br><span class="line">     </span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">down_pic</span>(<span class="params">name,pic_urls</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    根据图片链接列表pic_urls, 下载所有图片，保存在以name命名的文件夹中,</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    path = <span class="string">&#x27;work/&#x27;</span>+<span class="string">&#x27;pics/&#x27;</span>+name+<span class="string">&#x27;/&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(path):</span><br><span class="line">      os.makedirs(path)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i, pic_url <span class="keyword">in</span> <span class="built_in">enumerate</span>(pic_urls):</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            pic = requests.get(pic_url, timeout=<span class="number">15</span>)</span><br><span class="line">            string = <span class="built_in">str</span>(i + <span class="number">1</span>) + <span class="string">&#x27;.jpg&#x27;</span></span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(path+string, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                f.write(pic.content)</span><br><span class="line">                print(<span class="string">&#x27;成功下载第%s张图片: %s&#x27;</span> % (<span class="built_in">str</span>(i + <span class="number">1</span>), <span class="built_in">str</span>(pic_url)))</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            print(<span class="string">&#x27;下载第%s张图片时失败: %s&#x27;</span> % (<span class="built_in">str</span>(i + <span class="number">1</span>), <span class="built_in">str</span>(pic_url)))</span><br><span class="line">            print(e)</span><br><span class="line">            <span class="keyword">continue</span></span><br></pre></td></tr></table></figure>
-<h3 id="四、打印所有爬取图片的路径"><a href="#四、打印所有爬取图片的路径" class="headerlink" title="四、打印所有爬取图片的路径"></a>四、打印所有爬取图片的路径</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_pic_path</span>(<span class="params">path</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    遍历所爬取的每张图片，并打印所有图片的绝对路径</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    pic_num = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> (dirpath,dirnames,filenames) <span class="keyword">in</span> os.walk(path):</span><br><span class="line">        <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">           pic_num += <span class="number">1</span></span><br><span class="line">           print(<span class="string">&quot;第%d张照片：%s&quot;</span> % (pic_num,os.path.join(dirpath,filename)))           </span><br><span class="line">    print(<span class="string">&quot;共爬取《青春有你2》选手的%d照片&quot;</span> % pic_num)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-<h3 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">     <span class="comment">#爬取百度百科中《青春有你2》中参赛选手信息，返回html</span></span><br><span class="line">     html = crawl_wiki_data()</span><br><span class="line"></span><br><span class="line">     <span class="comment">#解析html,得到选手信息，保存为json文件</span></span><br><span class="line">     parse_wiki_data(html)</span><br><span class="line"></span><br><span class="line">     <span class="comment">#从每个选手的百度百科页面上爬取图片,并保存</span></span><br><span class="line">     crawl_pic_urls()</span><br><span class="line"></span><br><span class="line">     <span class="comment">#打印所爬取的选手图片路径</span></span><br><span class="line">     show_pic_path(<span class="string">&#x27;/home/aistudio/work/pics/&#x27;</span>)</span><br><span class="line"></span><br><span class="line">     print(<span class="string">&quot;所有信息爬取完成！&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h2><h3 id="一、绘制选手区域分布的柱状图"><a href="#一、绘制选手区域分布的柱状图" class="headerlink" title="一、绘制选手区域分布的柱状图"></a>一、绘制选手区域分布的柱状图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> matplotlib.font_manager <span class="keyword">as</span> font_manager</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示matplotlib生成的图形</span></span><br><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;work/20200422.json&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">         json_array = json.loads(file.read())</span><br><span class="line"></span><br><span class="line"><span class="comment">#绘制小姐姐区域分布柱状图,x轴为地区，y轴为该区域的小姐姐数量</span></span><br><span class="line"></span><br><span class="line">zones = []</span><br><span class="line"><span class="keyword">for</span> star <span class="keyword">in</span> json_array:</span><br><span class="line">    zone = star[<span class="string">&#x27;zone&#x27;</span>]</span><br><span class="line">    zones.append(zone)</span><br><span class="line">print(<span class="built_in">len</span>(zones))</span><br><span class="line">print(zones)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">zone_list = []</span><br><span class="line">count_list = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> zone <span class="keyword">in</span> zones:</span><br><span class="line">    <span class="keyword">if</span> zone <span class="keyword">not</span> <span class="keyword">in</span> zone_list:</span><br><span class="line">        count = zones.count(zone)</span><br><span class="line">        zone_list.append(zone)</span><br><span class="line">        count_list.append(count)</span><br><span class="line"></span><br><span class="line">print(zone_list)</span><br><span class="line">print(count_list)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置显示中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>] <span class="comment"># 指定默认字体</span></span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">20</span>,<span class="number">15</span>))</span><br><span class="line"></span><br><span class="line">plt.bar(<span class="built_in">range</span>(<span class="built_in">len</span>(count_list)), count_list,color=<span class="string">&#x27;r&#x27;</span>,tick_label=zone_list,facecolor=<span class="string">&#x27;#9999ff&#x27;</span>,edgecolor=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里是调节横坐标的倾斜度，rotation是度数，以及设置刻度字体大小</span></span><br><span class="line">plt.xticks(rotation=<span class="number">45</span>,fontsize=<span class="number">20</span>)</span><br><span class="line">plt.yticks(fontsize=<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br><span class="line">plt.title(<span class="string">&#x27;&#x27;&#x27;《青春有你2》参赛选手&#x27;&#x27;&#x27;</span>,fontsize = <span class="number">24</span>)</span><br><span class="line">plt.savefig(<span class="string">&#x27;/home/aistudio/work/result/bar_result01.jpg&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> matplotlib.font_manager <span class="keyword">as</span> font_manager</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示matplotlib生成的图形</span></span><br><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">df = pd.read_json(<span class="string">&#x27;work/20200422.json&#x27;</span>)</span><br><span class="line"><span class="comment">#print(df)</span></span><br><span class="line"></span><br><span class="line">grouped=df[<span class="string">&#x27;name&#x27;</span>].groupby(df[<span class="string">&#x27;zone&#x27;</span>])</span><br><span class="line">s = grouped.count()</span><br><span class="line">print(s)</span><br><span class="line"></span><br><span class="line">zone_list = s.index</span><br><span class="line">count_list = s.values</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置显示中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>] <span class="comment"># 指定默认字体</span></span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">20</span>,<span class="number">15</span>))</span><br><span class="line"></span><br><span class="line">plt.bar(<span class="built_in">range</span>(<span class="built_in">len</span>(count_list)), count_list,color=<span class="string">&#x27;r&#x27;</span>,tick_label=zone_list,facecolor=<span class="string">&#x27;#9999ff&#x27;</span>,edgecolor=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里是调节横坐标的倾斜度，rotation是度数，以及设置刻度字体大小</span></span><br><span class="line">plt.xticks(rotation=<span class="number">45</span>,fontsize=<span class="number">20</span>)</span><br><span class="line">plt.yticks(fontsize=<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br><span class="line">plt.title(<span class="string">&#x27;&#x27;&#x27;《青春有你2》参赛选手&#x27;&#x27;&#x27;</span>,fontsize = <span class="number">24</span>)</span><br><span class="line">plt.savefig(<span class="string">&#x27;/home/aistudio/work/result/bar_result02.jpg&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="二、绘制选手体重的饼状图"><a href="#二、绘制选手体重的饼状图" class="headerlink" title="二、绘制选手体重的饼状图"></a>二、绘制选手体重的饼状图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> matplotlib.font_manager <span class="keyword">as</span> font_manager</span><br><span class="line"><span class="comment">#显示matplotlib生成的图形</span></span><br><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;work/20200422.json&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">         json_array = json.loads(file.read())</span><br><span class="line"></span><br><span class="line"><span class="comment">#绘制小姐姐籍贯分布直方图,x轴为籍贯，y轴为该籍贯的小姐姐数量</span></span><br><span class="line"></span><br><span class="line">weights = []</span><br><span class="line">counts = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> star <span class="keyword">in</span> json_array:</span><br><span class="line">    weight = <span class="built_in">float</span>(star[<span class="string">&#x27;weight&#x27;</span>].replace(<span class="string">&#x27;kg&#x27;</span>,<span class="string">&#x27;&#x27;</span>))</span><br><span class="line">    weights.append(weight)</span><br><span class="line">print(weights)</span><br><span class="line"></span><br><span class="line">size_list = []</span><br><span class="line">count_list = []</span><br><span class="line"></span><br><span class="line">size1 = <span class="number">0</span></span><br><span class="line">size2 = <span class="number">0</span></span><br><span class="line">size3 = <span class="number">0</span></span><br><span class="line">size4 = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> weight <span class="keyword">in</span> weights:</span><br><span class="line">    <span class="keyword">if</span> weight &lt;=<span class="number">45</span>:</span><br><span class="line">        size1 += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> <span class="number">45</span> &lt; weight &lt;= <span class="number">50</span>:</span><br><span class="line">        size2 += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> <span class="number">50</span> &lt; weight &lt;= <span class="number">55</span>:</span><br><span class="line">        size3 += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        size4 += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">labels = <span class="string">&#x27;&lt;=45kg&#x27;</span>, <span class="string">&#x27;45~50kg&#x27;</span>, <span class="string">&#x27;50~55kg&#x27;</span>, <span class="string">&#x27;&gt;55kg&#x27;</span></span><br><span class="line"></span><br><span class="line">sizes = [size1, size2, size3, size4]</span><br><span class="line">explode = (<span class="number">0.2</span>, <span class="number">0.1</span>, <span class="number">0</span>, <span class="number">0</span>)  </span><br><span class="line">fig1, ax1 = plt.subplots()</span><br><span class="line">ax1.pie(sizes, explode=explode, labels=labels, autopct=<span class="string">&#x27;%1.1f%%&#x27;</span>,</span><br><span class="line">        shadow=<span class="literal">True</span>)</span><br><span class="line">ax1.axis(<span class="string">&#x27;equal&#x27;</span>) </span><br><span class="line">plt.savefig(<span class="string">&#x27;/home/aistudio/work/result/pie_result01.jpg&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> matplotlib.font_manager <span class="keyword">as</span> font_manager</span><br><span class="line"><span class="comment">#显示matplotlib生成的图形</span></span><br><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line">df = pd.read_json(<span class="string">&#x27;work/20200422.json&#x27;</span>)</span><br><span class="line"><span class="comment">#print(df)</span></span><br><span class="line"></span><br><span class="line">weights=df[<span class="string">&#x27;weight&#x27;</span>]</span><br><span class="line">arrs = weights.values</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(arrs)):</span><br><span class="line">    <span class="comment">#print(float(arrs[i][0:-2]))</span></span><br><span class="line">    arrs[i] = <span class="built_in">float</span>(arrs[i][<span class="number">0</span>:-<span class="number">2</span>])</span><br><span class="line"><span class="comment">#print(arrs)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pandas.cut用来把一组数据分割成离散的区间。比如有一组年龄数据，可以使用pandas.cut将年龄数据分割成不同的年龄段并打上标签。bins是被切割后的区间.</span></span><br><span class="line"><span class="built_in">bin</span>=[<span class="number">0</span>,<span class="number">45</span>,<span class="number">50</span>,<span class="number">55</span>,<span class="number">100</span>]</span><br><span class="line">se1=pd.cut(arrs,<span class="built_in">bin</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#pandas的value_counts()函数可以对Series里面的每个值进行计数并且排序。</span></span><br><span class="line">pd.value_counts(se1)</span><br><span class="line"></span><br><span class="line">labels = <span class="string">&#x27;&lt;=45kg&#x27;</span>, <span class="string">&#x27;45~50kg&#x27;</span>, <span class="string">&#x27;50~55kg&#x27;</span>, <span class="string">&#x27;&gt;55kg&#x27;</span></span><br><span class="line">sizes = pd.value_counts(se1)</span><br><span class="line"></span><br><span class="line">print(sizes)</span><br><span class="line">explode = (<span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">0</span>, <span class="number">0</span>)  </span><br><span class="line"></span><br><span class="line">fig1, ax1 = plt.subplots()</span><br><span class="line">ax1.pie(sizes, explode=explode, labels=labels, autopct=<span class="string">&#x27;%1.1f%%&#x27;</span>,</span><br><span class="line">        shadow=<span class="literal">True</span>, startangle=<span class="number">90</span>)</span><br><span class="line">ax1.axis(<span class="string">&#x27;equal&#x27;</span>) </span><br><span class="line">plt.savefig(<span class="string">&#x27;/home/aistudio/work/result/pie_result02.jpg&#x27;</span>) </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="avatar.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">实践</a>
-        		</li>
-      		
-		</ul>
-	</div>
+    	 
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/11/%E7%88%AC%E5%8F%96%E3%80%8A%E9%9D%92%E6%98%A5%E6%9C%89%E4%BD%A02%E3%80%8B%E4%B8%AD%E6%89%80%E6%9C%89%E5%8F%82%E8%B5%9B%E9%80%89%E6%89%8B%E6%95%B0%E6%8D%AE%E5%B9%B6%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/02/18/%E5%BC%80%E6%94%BEMySQL%E7%9A%84%E7%AB%AF%E5%8F%A3%EF%BC%8C%E8%BF%9C%E7%A8%8B%E9%93%BE%E6%8E%A5mysql/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/01/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -382,8 +209,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

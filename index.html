@@ -152,6 +152,59 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-开放MySQL的端口，远程链接mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="开放MySQL的端口，远程链接mysql"><a href="#开放MySQL的端口，远程链接mysql" class="headerlink" title="开放MySQL的端口，远程链接mysql"></a>开放MySQL的端口，远程链接mysql</h1><p>版本：cenos7 + mysql8 </p>
+<h3 id="一、开启centos的3306端口"><a href="#一、开启centos的3306端口" class="headerlink" title="一、开启centos的3306端口"></a>一、开启centos的3306端口</h3><p>​        1、防火墙开启3306端口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;8080&#x2F;tcp --permanent</span><br></pre></td></tr></table></figure>
+<p>​        2、重启防火墙，（必须操作）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+<h3 id="二、mysql授权远程登录"><a href="#二、mysql授权远程登录" class="headerlink" title="二、mysql授权远程登录"></a>二、mysql授权远程登录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">登录数据库：mysql -uroot -p</span><br><span class="line">mysql&gt;use mysql;</span><br><span class="line">* 修改root的权限为 % ,就是root所有的机器都可以访问</span><br><span class="line">mysql&gt;update user set host &#x3D; &#39;%&#39; where user &#x3D; &#39;root&#39;;</span><br><span class="line">*查看修改结果</span><br><span class="line">mysql&gt;select host, user from user;</span><br><span class="line">*刷新(必输)</span><br><span class="line">mysql&gt;flush privileges;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/18/%E5%BC%80%E6%94%BEMySQL%E7%9A%84%E7%AB%AF%E5%8F%A3%EF%BC%8C%E8%BF%9C%E7%A8%8B%E9%93%BE%E6%8E%A5mysql/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-爬取《青春有你2》中所有参赛选手数据并进行数据分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
