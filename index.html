@@ -152,6 +152,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Xpath的解析原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/24/Xpath%E7%9A%84%E8%A7%A3%E6%9E%90%E5%8E%9F%E7%90%86/">Xpath数据解析</a>
+    </h1>
+  
+
+        
+        <a href="/2021/07/24/Xpath%E7%9A%84%E8%A7%A3%E6%9E%90%E5%8E%9F%E7%90%86/" class="archive-article-date">
+  	<time datetime="2021-07-23T19:49:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Xpath的解析原理："><a href="#Xpath的解析原理：" class="headerlink" title="Xpath的解析原理："></a>Xpath的解析原理：</h1><pre><code>1、实例化一个etree对象，且需要加载本地或者请求到的源码数据
+2、调用etree对象中的Xpath方法并结合Xpath表达式事项对标签的定位和内容的捕获</code></pre>
+<h1 id="环境安装："><a href="#环境安装：" class="headerlink" title="环境安装："></a>环境安装：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install lxml</span><br></pre></td></tr></table></figure>
+<h1 id="如何实例化一个etree对象："><a href="#如何实例化一个etree对象：" class="headerlink" title="如何实例化一个etree对象："></a>如何实例化一个etree对象：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、导入库</span><br><span class="line">	from lxml import etree</span><br><span class="line">2、将请求或者本地的源码数据级加载到该对象之中</span><br><span class="line">	etree.parse(file_path)   #本地创建</span><br><span class="line">	etree.HTML(response)    #王爷请求加载</span><br></pre></td></tr></table></figure>
+<h1 id="写Xpath表达式！！！！！！！"><a href="#写Xpath表达式！！！！！！！" class="headerlink" title="写Xpath表达式！！！！！！！"></a>写Xpath表达式！！！！！！！</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">注：假设以经常见好了etree对象，下面用tree表示！</span><br><span class="line"></span><br><span class="line">tree.xpath(&#39;&#x2F;html&#x2F;head&#x2F;title&#39;)  # 一层一层的找到某一个标签，&#39;&#x2F;&#39;表示‘根’（很像linux的文件目录）</span><br><span class="line"></span><br><span class="line">tree.xpath(&#39;&#x2F;html&#x2F;&#x2F;div&#39;)    #&#39;&#x2F;&#x2F;&#39;可以从任意位置开始定位  &#39;&#x2F;&#x2F;&#39;表示省略了多个标签等级</span><br><span class="line"></span><br><span class="line">tree.xpath(&#39;&#x2F;html&#x2F;&#x2F;div[3]&#39;)   #[]表示的是‘第几个‘ 是从1开始并不是从0开始</span><br><span class="line"></span><br><span class="line">定位有classs属性的标签：</span><br><span class="line">	直接写xpath表达式啦0.0</span><br><span class="line">	&quot;&#x2F;&#x2F;div[@class&#x3D;&quot;xxx&quot;]&quot; #就表示的定位一个class为“xxx”的div</span><br><span class="line">	&quot;&#x2F;&#x2F;div[@class&#x3D;&quot;xxx&quot;]&#x2F;&#x2F;li[5]&#x2F;a&quot;  #表示class为“xxx”的div下的第5个li标签下的a标签</span><br></pre></td></tr></table></figure>
+<h1 id="提取文本内容"><a href="#提取文本内容" class="headerlink" title="提取文本内容"></a>提取文本内容</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">&quot;&#x2F;&#x2F;div[@classs&#x3D;&quot;xxx&quot;]&#x2F;&#x2F;li&#x2F;text()&quot;  #注意写法位置</span><br><span class="line"></span><br><span class="line">&#x2F;text()   #表示提取出某个位置直系标签里的内容</span><br><span class="line">&#x2F;&#x2F;text()  #表示提取某个位置标签里所有标签里的内容</span><br></pre></td></tr></table></figure>
+<h1 id="提取属性内容"><a href="#提取属性内容" class="headerlink" title="提取属性内容"></a>提取属性内容</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">&quot;&#x2F;&#x2F;div[@class&#x3D;&quot;xxx&quot;]&#x2F;img&#x2F;@src&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;@attrbute_Name    </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫Xpath</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/24/Xpath%E7%9A%84%E8%A7%A3%E6%9E%90%E5%8E%9F%E7%90%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Python常用魔术方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1026,6 +1105,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫Xpath</a>
               </li>
              
               <li class="article-tag-list-item">
